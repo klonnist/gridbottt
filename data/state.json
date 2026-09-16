@@ -4,7 +4,7 @@
     "initial_balance_usd": 10000.0,
     "leverage": 3,
     "next_trade_id": 1,
-    "last_run_at": "2026-09-16T11:03:32.093020+00:00",
+    "last_run_at": "2026-09-16T11:23:56.220660+00:00",
     "total_equity": 10000.0,
     "total_realized_pnl": 0.0,
     "total_unrealized_pnl": 0
@@ -83,7 +83,7 @@
           "qty": null
         }
       ],
-      "last_price": 75923.3,
+      "last_price": 75884.6,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -166,7 +166,7 @@
           "qty": null
         }
       ],
-      "last_price": 2406.29,
+      "last_price": 2404.06,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -249,7 +249,7 @@
           "qty": null
         }
       ],
-      "last_price": 1.2886,
+      "last_price": 1.2866,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -332,7 +332,7 @@
           "qty": null
         }
       ],
-      "last_price": 7.257,
+      "last_price": 7.259,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -415,7 +415,7 @@
           "qty": null
         }
       ],
-      "last_price": 97.26,
+      "last_price": 97.08,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -498,7 +498,7 @@
           "qty": null
         }
       ],
-      "last_price": 0.9583,
+      "last_price": 0.9587,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -581,7 +581,7 @@
           "qty": null
         }
       ],
-      "last_price": 2.441,
+      "last_price": 2.455,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -664,7 +664,7 @@
           "qty": null
         }
       ],
-      "last_price": 0.5942,
+      "last_price": 0.5935,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,

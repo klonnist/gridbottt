@@ -110,5 +110,21 @@
       "NEAR": 1250.0,
       "ETHFI": 1250.0
     }
+  },
+  {
+    "timestamp": "2026-09-16T11:23:56.220660+00:00",
+    "total_equity": 10000.0,
+    "total_realized_pnl": 0.0,
+    "total_unrealized_pnl": 0,
+    "per_coin_equity": {
+      "BTC": 1250.0,
+      "ETH": 1250.0,
+      "XRP": 1250.0,
+      "AVAX": 1250.0,
+      "SOL": 1250.0,
+      "DOT": 1250.0,
+      "NEAR": 1250.0,
+      "ETHFI": 1250.0
+    }
   }
 ]
