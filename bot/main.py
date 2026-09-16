@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from . import config
 from . import okx_client
 from . import storage
-from .grid_engine import compute_grid_bounds, init_coin_state, process_price_update
+from .grid_engine import compute_grid_bounds, init_coin_state, migrate_legacy_cells, process_price_update
 
 
 def now_iso() -> str:
@@ -79,6 +79,7 @@ def run_once() -> None:
                 continue
 
             coin_state = coins_state[symbol]
+            migrate_legacy_cells(coin_state)
             result = process_price_update(symbol, coin_state, price, run_timestamp)
             coin_state["unrealized_pnl"] = result.unrealized_pnl
             coin_state["balance"] = coin_state["margin_usd"] + coin_state["realized_pnl"]

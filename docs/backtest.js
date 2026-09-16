@@ -109,6 +109,10 @@ function computeGridBounds(lookbackCandles, pad) {
   return { lower: recentLow * (1 - pad), upper: recentHigh * (1 + pad) };
 }
 
+function emptyLeg() {
+  return { status: "empty", entryPrice: null, qty: null, openedAt: null };
+}
+
 function initCoinState(lower, upper, levels, marginUsd, leverage) {
   return {
     lower,
@@ -118,7 +122,7 @@ function initCoinState(lower, upper, levels, marginUsd, leverage) {
     notionalPerCell: (marginUsd * leverage) / levels,
     marginUsd,
     leverage,
-    cells: Array.from({ length: levels }, () => ({ status: "empty", entryPrice: null, qty: null, openedAt: null })),
+    cells: Array.from({ length: levels }, () => ({ long: emptyLeg(), short: emptyLeg() })),
     lastPrice: null,
     realizedPnl: 0,
     tradesCount: 0,
@@ -128,8 +132,30 @@ function initCoinState(lower, upper, levels, marginUsd, leverage) {
   };
 }
 
-/** Advances state by one price tick. Opening a cell is not a trade record --
- * one round-trip (buy+sell) is pushed into tradesOut only when it closes. */
+function closeLeg(state, tradesOut, symbol, side, leg, exitPrice, ts) {
+  const pnl = side === "long" ? leg.qty * (exitPrice - leg.entryPrice) : leg.qty * (leg.entryPrice - exitPrice);
+  state.realizedPnl += pnl;
+  state.tradesCount++;
+  if (pnl > 0) state.wins++;
+  else if (pnl < 0) state.losses++;
+  else state.breakeven++;
+  tradesOut.push({
+    coin: symbol,
+    side,
+    entryPrice: leg.entryPrice,
+    exitPrice,
+    qty: leg.qty,
+    pnl,
+    openedAt: leg.openedAt,
+    closedAt: ts,
+  });
+}
+
+/** Advances state by one price tick. Opening a leg is not a trade record --
+ * one round-trip (open+close) is pushed into tradesOut only when it closes.
+ * Cell k's long leg opens/closes at its bottom/top line; its short leg opens
+ * at the top and closes at the bottom -- see grid_engine.py for the full
+ * rationale (this mirrors it 1:1). */
 function processTick(symbol, state, price, ts, tradesOut) {
   const prev = state.lastPrice;
   if (prev === null) {
@@ -139,36 +165,29 @@ function processTick(symbol, state, price, ts, tradesOut) {
   const { gridLines: lines, cells, notionalPerCell: notional } = state;
 
   if (price < prev) {
-    for (let i = 0; i < cells.length; i++) {
-      const line = lines[i];
-      if (price <= line && line < prev && cells[i].status === "empty") {
-        const qty = notional / line;
-        cells[i] = { status: "filled", entryPrice: line, qty, openedAt: ts };
+    for (let m = 0; m < cells.length; m++) {
+      const line = lines[m];
+      if (!(price <= line && line < prev)) continue;
+      const cell = cells[m];
+      if (cell.long.status === "empty") {
+        cell.long = { status: "filled", entryPrice: line, qty: notional / line, openedAt: ts };
+      }
+      if (cell.short.status === "filled") {
+        closeLeg(state, tradesOut, symbol, "short", cell.short, line, ts);
+        cell.short = emptyLeg();
       }
     }
   } else if (price > prev) {
-    for (let j = 1; j < lines.length; j++) {
-      const line = lines[j];
-      const idx = j - 1;
-      if (prev < line && line <= price && cells[idx].status === "filled") {
-        const cell = cells[idx];
-        const pnl = cell.qty * (line - cell.entryPrice);
-        state.realizedPnl += pnl;
-        state.tradesCount++;
-        if (pnl > 0) state.wins++;
-        else if (pnl < 0) state.losses++;
-        else state.breakeven++;
-        tradesOut.push({
-          coin: symbol,
-          side: "long",
-          entryPrice: cell.entryPrice,
-          exitPrice: line,
-          qty: cell.qty,
-          pnl,
-          openedAt: cell.openedAt,
-          closedAt: ts,
-        });
-        cells[idx] = { status: "empty", entryPrice: null, qty: null, openedAt: null };
+    for (let m = 1; m < lines.length; m++) {
+      const line = lines[m];
+      if (!(prev < line && line <= price)) continue;
+      const cell = cells[m - 1];
+      if (cell.long.status === "filled") {
+        closeLeg(state, tradesOut, symbol, "long", cell.long, line, ts);
+        cell.long = emptyLeg();
+      }
+      if (cell.short.status === "empty") {
+        cell.short = { status: "filled", entryPrice: line, qty: notional / line, openedAt: ts };
       }
     }
   }
@@ -193,10 +212,12 @@ function simulateCoin(symbol, lookbackCandles, simCandles, { marginUsd, leverage
 
   for (const candle of simCandles) {
     for (const p of candleSubticks(candle)) processTick(symbol, state, p, candle.ts, trades);
-    const unrealized = state.cells.reduce(
-      (sum, c) => (c.status === "filled" ? sum + c.qty * (candle.close - c.entryPrice) : sum),
-      0
-    );
+    const unrealized = state.cells.reduce((sum, cell) => {
+      let s = sum;
+      if (cell.long.status === "filled") s += cell.long.qty * (candle.close - cell.long.entryPrice);
+      if (cell.short.status === "filled") s += cell.short.qty * (cell.short.entryPrice - candle.close);
+      return s;
+    }, 0);
     equityPoints.push({ ts: candle.ts, equity: marginUsd + state.realizedPnl + unrealized });
   }
 

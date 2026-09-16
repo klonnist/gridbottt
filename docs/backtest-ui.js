@@ -132,16 +132,18 @@ function renderTradesTable(perCoinResults) {
     const filtered = filter === "all" ? allTrades : allTrades.filter((t) => t.coin === filter);
     const body = document.getElementById("btTradesBody");
     if (filtered.length === 0) {
-      body.innerHTML = `<tr><td colspan="7" class="empty-row">Islem yok</td></tr>`;
+      body.innerHTML = `<tr><td colspan="8" class="empty-row">Islem yok</td></tr>`;
       return;
     }
     body.innerHTML = filtered
       .slice(0, 500)
       .map((t) => {
         const cls = pnlClass(t.pnl);
+        const direction = t.side === "short" ? "SHORT" : "LONG";
         return `<tr>
           <td>${fmtDate(t.closedAt)}</td>
           <td>${t.coin}</td>
+          <td>${direction}</td>
           <td class="${cls}">${tradeOutcomeLabel(t)}</td>
           <td>${Number(t.entryPrice).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
           <td>${Number(t.exitPrice).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>

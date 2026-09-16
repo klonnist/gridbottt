@@ -8,6 +8,8 @@ const fmtDate = (iso) => {
   return d.toLocaleString("tr-TR", { dateStyle: "medium", timeStyle: "short" });
 };
 const pnlClass = (n) => (n >= 0 ? "positive" : "negative");
+const countOpenLots = (cells) =>
+  (cells || []).reduce((sum, c) => sum + (c.long?.status === "filled" ? 1 : 0) + (c.short?.status === "filled" ? 1 : 0), 0);
 
 async function fetchJson(path, fallback) {
   try {
@@ -28,7 +30,7 @@ function computeCoinStats(symbol, coinState, trades) {
   const winRate = totalClosed > 0 ? (wins / totalClosed) * 100 : 0;
   const avgPnl = totalClosed > 0 ? coinState.realized_pnl / totalClosed : 0;
   const equity = (coinState.margin_usd || 0) + (coinState.realized_pnl || 0) + (coinState.unrealized_pnl || 0);
-  const openLots = (coinState.cells || []).filter((c) => c.status === "filled").length;
+  const openLots = countOpenLots(coinState.cells);
 
   return {
     symbol,
@@ -51,10 +53,7 @@ function renderSummary(state, allTrades) {
   const totalEquity = meta.total_equity ?? INITIAL_BALANCE;
   const totalPnl = totalEquity - INITIAL_BALANCE;
   const totalPnlPct = (totalPnl / INITIAL_BALANCE) * 100;
-  const openPositions = Object.values(coins).reduce(
-    (sum, c) => sum + (c.cells || []).filter((cell) => cell.status === "filled").length,
-    0
-  );
+  const openPositions = Object.values(coins).reduce((sum, c) => sum + countOpenLots(c.cells), 0);
   const wins = allTrades.filter((t) => t.pnl >= 0).length;
   const winRate = allTrades.length > 0 ? (wins / allTrades.length) * 100 : 0;
 
@@ -122,7 +121,7 @@ function renderTrades(trades, filter) {
   const sorted = [...filtered].sort((a, b) => new Date(b.closed_at) - new Date(a.closed_at));
 
   if (sorted.length === 0) {
-    body.innerHTML = `<tr><td colspan="7" class="empty-row">Henüz işlem yok</td></tr>`;
+    body.innerHTML = `<tr><td colspan="8" class="empty-row">Henüz işlem yok</td></tr>`;
     return;
   }
 
@@ -131,9 +130,11 @@ function renderTrades(trades, filter) {
     .map((t) => {
       const cls = pnlClass(t.pnl);
       const outcome = t.pnl > 0 ? "KAZANÇ" : t.pnl < 0 ? "KAYIP" : "BAŞABAŞ";
+      const direction = t.side === "short" ? "SHORT" : "LONG";
       return `<tr>
         <td>${fmtDate(t.closed_at)}</td>
         <td>${t.coin}</td>
+        <td>${direction}</td>
         <td class="${cls}">${outcome}</td>
         <td>${Number(t.entry_price).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
         <td>${Number(t.exit_price).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>

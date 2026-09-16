@@ -49,12 +49,15 @@ Her coin için ayrı bir grid kurulur: `lower` (alt sınır) ile `upper` (üst s
 **Grid sınırları nasıl belirleniyor — `GRID_METHOD = "auto"` (varsayılan):**
 Son `LOOKBACK_DAYS` (varsayılan 14 gün, `4H` mumlarla) içindeki en yüksek/en düşük fiyat alınır, üste ve alta `GRID_RANGE_PAD` (±%5) pay bırakılır. Böylece her coin kendi güncel volatilitesine göre bir grid alır; sabit/manuel değer girmek yerine botun kendisi güncel piyasaya uyum sağlar. İstenirse `GRID_METHOD = "manual"` yapılıp `MANUAL_GRID_BOUNDS` içinden coin başına sabit alt/üst sınır girilebilir.
 
-**İşlem mantığı:**
-- Grid, alt sınırla üst sınır arasında `GRID_LEVELS` adet "hücre"ye bölünür. Her hücre, tabanındaki çizgiden **BUY (long aç)**, tepesindeki çizgiden **SAT (kapat, kâr/zarar gerçekleşir)** ile eşleşir.
-- Fiyat bir hücrenin tabanına düşünce (ve o hücre boşsa) simüle **BUY** işlemi olur.
-- Fiyat bir dolu hücrenin tepesine çıkınca simüle **SAT** işlemi olur, gerçekleşen kâr/zarar hesaplanır.
-- Bu, borsaların kendi "futures grid" botlarının **long-odaklı / nötr grid** modudur: perpetual (perp) enstrüman ve kaldıraç kullanılır, ama pozisyonlar hep long taraftadır (fiyat düşünce alınır, yükselince satılır). Şu an ayrı bir "short grid" (fiyat yükselince aç, düşünce kapat) modellenmiyor; `bot/grid_engine.py` bunu eklemeye uygun şekilde yazıldı, istenirse `grid_mode` parametresiyle genişletilebilir.
-- Fiyat grid sınırlarının dışına çıkarsa, geri dönene kadar o coin için yeni işlem üretilmez (mevcut açık lotlar dashboard'da "açık pozisyon" olarak görünmeye devam eder).
+**İşlem mantığı — nötr grid (long + short bir arada):**
+- Grid, alt sınırla üst sınır arasında `GRID_LEVELS` adet "hücre"ye bölünür. Her hücre **hem bir long hem bir short lot'u aynı anda, birbirinden bağımsız** tutabilir:
+  - **Long bacak:** hücrenin tabanında **AL** (long aç), tepesinde **SAT** (kapat, kâr gerçekleşir).
+  - **Short bacak:** hücrenin tepesinde **SAT (açığa satış)** (short aç), tabanında **AL** (kapat/cover, kâr gerçekleşir).
+- Fiyat bir çizgiyi aşağı yönlü geçince: altındaki hücrenin long bacağı (boşsa) açılır **ve** üstündeki hücrenin short bacağı (doluysa) kapanır.
+- Fiyat bir çizgiyi yukarı yönlü geçince: altındaki hücrenin long bacağı (doluysa) kapanır **ve** üstündeki hücrenin short bacağı (boşsa) açılır.
+- Her iki bacak da yapısı gereği yalnızca kârla kapanabilir (long'un çıkışı girişinden yüksek, short'un çıkışı girişinden düşük olmak zorunda) — bu yüzden backtest'te "%100 kazanma oranı" görmeniz normaldir. Gerçek risk, fiyat geri dönmeyip **açık kalan bacakta** (trend yönünün tersindeki bacakta) biriken **unrealized** kayıptadır: fiyat sert yükselirse açık short'lar, sert düşerse açık long'lar zararda kalır. Bu yüzden strateji **yatay/range piyasada** iyi çalışır, **güçlü tek yönlü trendde** zayıflar.
+- Her iki bacak da aynı `notional_per_cell_usd` büyüklüğünü kullanır; bir hücrenin hem long hem short'u aynı anda dolu olabileceği için o hücredeki toplam açık nominal, tek yönlü (sadece long) tasarıma göre 2 katına kadar çıkabilir — bu, mevcut basit marj modelinde ayrıca sınırlanmıyor.
+- Fiyat grid sınırlarının dışına çıkarsa, geri dönene kadar o sınırdaki yeni işlemler üretilmez (mevcut açık lotlar dashboard'da "açık pozisyon" olarak görünmeye devam eder).
 
 ## Backtest (kendi tarih araliginizi secin)
 
@@ -62,7 +65,7 @@ Dashboard'daki **📈 Backtest** linki (`docs/backtest.html`) tamamen tarayicida
 
 Cikti canli dashboard'a benzer sekilde: ozet kartlar (baslangic/bitis bakiyesi, toplam K/Z, getiri %, islem sayisi, kazanma orani, max drawdown), bakiye egrisi grafigi, coin bazli performans tablosu, filtrelenebilir islem listesi, ve ayni veriyle denenen farkli grid seviye/pay kombinasyonlarinin karsilastirmasi. "Tum zaman dilimlerini kiyasla" secilirse 15dk/1sa/4sa/1gun ayni tarih araliginda arka arkaya calistirilip getiriye gore siralanir.
 
-**Onemli bir gozlem:** Bu grid modeli, gerceklesen bir SAT islemini yalnizca fiyat, o hucrenin alindigi seviyenin **uzerine** ciktiginda tetikler -- yani gerceklesen kar/zarar matematiksel olarak hep pozitiftir (backtest'te "%100 kazanma orani" gormeniz normaldir). Risk, gerceklesen islemlerde degil, fiyat asla geri gelmezse acik pozisyonda biriken **unrealized** kayipta / o sure boyunca kilitli kalan marjinda gizlidir -- bu yuzden dashboard'daki "Acik K/Z (unrealized)" ve backtest'teki "Max Drawdown" degerlerine de bakmadan sadece kazanma oranina guvenmeyin.
+**Onemli gozlem (yukaridaki "Grid stratejisi" bolumundeki notun kisa hatirlatmasi):** her iki bacak da (long ve short) yapisi geregi hep karla kapanir, bu yuzden backtest'te "%100 kazanma orani" gormeniz normaldir -- gercek risk realized islemlerde degil, trend yonunun tersinde acik kalan bacagin **unrealized** kaybinda. Sadece kazanma oranina degil, "Max Drawdown" ve acik pozisyon PnL'ine de bakin.
 
 ## Dashboard
 
