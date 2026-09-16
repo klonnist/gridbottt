@@ -4,10 +4,10 @@
     "initial_balance_usd": 10000.0,
     "leverage": 3,
     "next_trade_id": 1,
-    "last_run_at": "2026-09-16T18:39:57.699282+00:00",
-    "total_equity": 9997.117298632655,
+    "last_run_at": "2026-09-16T18:52:13.050060+00:00",
+    "total_equity": 9998.63955214874,
     "total_realized_pnl": 0.0,
-    "total_unrealized_pnl": -2.8827013673453146
+    "total_unrealized_pnl": -1.3604478512612255
   },
   "coins": {
     "BTC": {
@@ -173,7 +173,7 @@
           }
         }
       ],
-      "last_price": 75753.5,
+      "last_price": 75736.5,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -346,15 +346,15 @@
           }
         }
       ],
-      "last_price": 2398.89,
+      "last_price": 2399.42,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553510,
-      "unrealized_pnl": -1.2751394592012775,
+      "unrealized_pnl": -1.192570364292091,
       "balance": 1250.0,
-      "equity": 1248.7248605407988
+      "equity": 1248.8074296357079
     },
     "XRP": {
       "inst_id": "XRP-USDT-SWAP",
@@ -519,7 +519,7 @@
           }
         }
       ],
-      "last_price": 1.2805,
+      "last_price": 1.2852,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -692,15 +692,15 @@
           }
         }
       ],
-      "last_price": 7.262,
+      "last_price": 7.29,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553512,
-      "unrealized_pnl": -1.607561908144037,
+      "unrealized_pnl": -0.16787748696913443,
       "balance": 1250.0,
-      "equity": 1248.3924380918559
+      "equity": 1249.8321225130308
     },
     "SOL": {
       "inst_id": "SOL-USDT-SWAP",
@@ -865,7 +865,7 @@
           }
         }
       ],
-      "last_price": 97.82,
+      "last_price": 98.0,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -1038,7 +1038,7 @@
           }
         }
       ],
-      "last_price": 0.9737,
+      "last_price": 0.9793,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -1211,7 +1211,7 @@
           }
         }
       ],
-      "last_price": 2.525,
+      "last_price": 2.522,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -1384,7 +1384,7 @@
           }
         }
       ],
-      "last_price": 0.5856,
+      "last_price": 0.5846,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
