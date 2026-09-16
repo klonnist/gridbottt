@@ -1,0 +1,126 @@
+.hidden { display: none !important; }
+
+.back-link {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.back-link:hover { color: var(--accent); }
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin: -4px 0 14px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.form-field input,
+.form-field select {
+  background: #0f1420;
+  color: var(--text);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.checkbox-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.coin-select-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.coin-select-header label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.coin-select-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.coin-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.coin-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f1420;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.run-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.run-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.run-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.run-status {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+.sweep-best {
+  background: rgba(38, 166, 154, 0.12);
+}
+
+@media (max-width: 900px) {
+  .form-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .form-grid { grid-template-columns: 1fr; }
+}

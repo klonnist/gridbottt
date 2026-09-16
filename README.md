@@ -56,6 +56,14 @@ Son `LOOKBACK_DAYS` (varsayılan 14 gün, `4H` mumlarla) içindeki en yüksek/en
 - Bu, borsaların kendi "futures grid" botlarının **long-odaklı / nötr grid** modudur: perpetual (perp) enstrüman ve kaldıraç kullanılır, ama pozisyonlar hep long taraftadır (fiyat düşünce alınır, yükselince satılır). Şu an ayrı bir "short grid" (fiyat yükselince aç, düşünce kapat) modellenmiyor; `bot/grid_engine.py` bunu eklemeye uygun şekilde yazıldı, istenirse `grid_mode` parametresiyle genişletilebilir.
 - Fiyat grid sınırlarının dışına çıkarsa, geri dönene kadar o coin için yeni işlem üretilmez (mevcut açık lotlar dashboard'da "açık pozisyon" olarak görünmeye devam eder).
 
+## Backtest (kendi tarih araliginizi secin)
+
+Dashboard'daki **📈 Backtest** linki (`docs/backtest.html`) tamamen tarayicida calisan, ayri bir arac: kendi baslangic/bitis tarihinizi, zaman diliminizi (15dk/1sa/4sa/1gun), coinlerinizi, bakiye/kaldirac/grid ayarlarinizi girip **"Calistir"**'a basiyorsunuz; sayfa OKX'in `history-candles` public endpoint'inden o araligin gecmis mumlarini ceker ve `bot/grid_engine.py` ile birebir ayni mantigi (JS'e port edilmis hali, `docs/backtest.js`) o veri uzerinde calistirir. Hicbir sey kaydedilmez, her calistirma taze bir simulasyondur.
+
+Cikti canli dashboard'a benzer sekilde: ozet kartlar (baslangic/bitis bakiyesi, toplam K/Z, getiri %, islem sayisi, kazanma orani, max drawdown), bakiye egrisi grafigi, coin bazli performans tablosu, filtrelenebilir islem listesi, ve ayni veriyle denenen farkli grid seviye/pay kombinasyonlarinin karsilastirmasi. "Tum zaman dilimlerini kiyasla" secilirse 15dk/1sa/4sa/1gun ayni tarih araliginda arka arkaya calistirilip getiriye gore siralanir.
+
+**Onemli bir gozlem:** Bu grid modeli, gerceklesen bir SAT islemini yalnizca fiyat, o hucrenin alindigi seviyenin **uzerine** ciktiginda tetikler -- yani gerceklesen kar/zarar matematiksel olarak hep pozitiftir (backtest'te "%100 kazanma orani" gormeniz normaldir). Risk, gerceklesen islemlerde degil, fiyat asla geri gelmezse acik pozisyonda biriken **unrealized** kayipta / o sure boyunca kilitli kalan marjinda gizlidir -- bu yuzden dashboard'daki "Acik K/Z (unrealized)" ve backtest'teki "Max Drawdown" degerlerine de bakmadan sadece kazanma oranina guvenmeyin.
+
 ## Dashboard
 
 Statik, build gerektirmeyen bir sayfa (`docs/index.html` + `style.css` + `app.js`), `data/*.json` dosyalarını `fetch` ile okuyup gösterir:

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grid Bot - Backtest</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="backtest.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1>&#128202; Grid Bot Backtest</h1>
+    <a class="back-link" href="index.html">&larr; Panele don</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="panel">
+    <h2>Yeni Backtest &mdash; kendi tarih araliginizi secin (tarayicinizda anlik calisir)</h2>
+    <p class="hint">Gecmis fiyat verisi dogrudan OKX'in genel (public) API'sinden cekilir. Sonuclar kaydedilmez, her calistirma taze bir simulasyondur.</p>
+
+    <div class="form-grid">
+      <div class="form-field">
+        <label>Zaman Dilimi</label>
+        <select id="timeframe">
+          <option value="15m">15 Dakika</option>
+          <option value="1H" selected>1 Saat</option>
+          <option value="4H">4 Saat</option>
+          <option value="1D">1 Gun</option>
+        </select>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="compareAllTimeframes" />
+          Tum zaman dilimlerini kiyasla (15dk/1sa/4sa/1gun)
+        </label>
+      </div>
+
+      <div class="form-field">
+        <label>Baslangic</label>
+        <input type="date" id="startDate" />
+      </div>
+
+      <div class="form-field">
+        <label>Bitis</label>
+        <input type="date" id="endDate" />
+      </div>
+
+      <div class="form-field">
+        <label>Bakiye (USDT)</label>
+        <input type="number" id="balance" value="10000" min="100" step="100" />
+      </div>
+
+      <div class="form-field">
+        <label>Kaldirac</label>
+        <input type="number" id="leverage" value="3" min="1" max="20" step="1" />
+      </div>
+
+      <div class="form-field">
+        <label>Grid Seviye Sayisi</label>
+        <input type="number" id="gridLevels" value="10" min="3" max="30" step="1" />
+      </div>
+
+      <div class="form-field">
+        <label>Grid Pay (%)</label>
+        <input type="number" id="gridPad" value="5" min="0" max="30" step="1" />
+      </div>
+
+      <div class="form-field">
+        <label>Lookback (gun)</label>
+        <input type="number" id="lookbackDays" value="14" min="1" max="90" step="1" />
+      </div>
+    </div>
+
+    <div class="coin-select-header">
+      <label>Coinler</label>
+      <div class="coin-select-actions">
+        <button type="button" id="selectAllCoins" class="toggle-btn">Tumunu sec</button>
+        <button type="button" id="clearAllCoins" class="toggle-btn">Tumunu kaldir</button>
+      </div>
+    </div>
+    <div class="coin-checkboxes" id="coinCheckboxes"></div>
+
+    <div class="run-row">
+      <button id="runBtn" class="run-btn">&#9654; Calistir</button>
+      <span id="runStatus" class="run-status"></span>
+    </div>
+  </section>
+
+  <section class="summary-grid hidden" id="resultSummary"></section>
+
+  <section class="panel hidden" id="chartPanel">
+    <h2 id="chartTitle">Bakiye Egrisi</h2>
+    <canvas id="resultChart" height="90"></canvas>
+  </section>
+
+  <section class="panel hidden" id="sweepPanel">
+    <h2>Denenen Grid Ayarlari (ayni backtest verisiyle)</h2>
+    <p class="hint">Ayni tarih araligi ve coin secimiyle farkli grid seviye/pay kombinasyonlari denenip getiriye gore siralanir. En iyisi vurgulanir.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Grid Seviye</th><th>Pay %</th><th>Islem</th><th>Kazanma Orani</th><th>Toplam K/Z</th><th>Getiri</th></tr></thead>
+        <tbody id="sweepBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel hidden" id="comparePanel">
+    <h2>Zaman Dilimi Karsilastirmasi</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Zaman Dilimi</th><th>Islem</th><th>Kazanma Orani</th><th>Toplam K/Z</th><th>Getiri</th><th>Max Drawdown</th></tr></thead>
+        <tbody id="compareBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel hidden" id="coinTablePanel">
+    <h2>Coin Bazli Performans</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Coin</th><th>Islem</th><th>Kazanan</th><th>Basabas</th><th>Kaybeden</th><th>Kazanma Orani</th><th>Toplam K/Z</th></tr></thead>
+        <tbody id="coinTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel hidden" id="tradesPanel">
+    <div class="panel-header">
+      <h2>Islemler</h2>
+      <select id="btCoinFilter"></select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Zaman</th><th>Coin</th><th>Sonuc</th><th>Fiyat</th><th>Miktar</th><th>K/Z</th></tr></thead>
+        <tbody id="btTradesBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&#9888;&#65039; Backtest sonuclari da paper-trading simulasyonudur; slippage, funding ve likidasyon modellenmez, gelecekteki performansi garanti etmez.</p>
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="backtest.js"></script>
+<script src="backtest-ui.js"></script>
+</body>
+</html>
