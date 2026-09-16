@@ -4,10 +4,10 @@
     "initial_balance_usd": 10000.0,
     "leverage": 3,
     "next_trade_id": 1,
-    "last_run_at": "2026-09-16T14:03:58.711148+00:00",
-    "total_equity": 9991.736677818466,
+    "last_run_at": "2026-09-16T14:24:32.950645+00:00",
+    "total_equity": 9991.835998879309,
     "total_realized_pnl": 0.0,
-    "total_unrealized_pnl": -8.263322181533997
+    "total_unrealized_pnl": -8.164001120690175
   },
   "coins": {
     "BTC": {
@@ -173,7 +173,7 @@
           }
         }
       ],
-      "last_price": 75533.3,
+      "last_price": 75571.7,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -346,15 +346,15 @@
           }
         }
       ],
-      "last_price": 2386.85,
+      "last_price": 2387.98,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553510,
-      "unrealized_pnl": -3.150860030345099,
+      "unrealized_pnl": -2.9748164883689587,
       "balance": 1250.0,
-      "equity": 1246.849139969655
+      "equity": 1247.025183511631
     },
     "XRP": {
       "inst_id": "XRP-USDT-SWAP",
@@ -692,15 +692,15 @@
           }
         }
       ],
-      "last_price": 7.247,
+      "last_price": 7.25,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553512,
-      "unrealized_pnl": -2.3788214194877053,
+      "unrealized_pnl": -2.2245695172189626,
       "balance": 1250.0,
-      "equity": 1247.6211785805124
+      "equity": 1247.775430482781
     },
     "SOL": {
       "inst_id": "SOL-USDT-SWAP",
@@ -865,15 +865,15 @@
           }
         }
       ],
-      "last_price": 96.91,
+      "last_price": 96.85,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553513,
-      "unrealized_pnl": -1.9378750767348198,
+      "unrealized_pnl": -2.1688494601358803,
       "balance": 1250.0,
-      "equity": 1248.0621249232652
+      "equity": 1247.8311505398642
     },
     "DOT": {
       "inst_id": "DOT-USDT-SWAP",
@@ -1038,7 +1038,7 @@
           }
         }
       ],
-      "last_price": 0.9732,
+      "last_price": 0.9707,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -1211,7 +1211,7 @@
           }
         }
       ],
-      "last_price": 2.455,
+      "last_price": 2.449,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -1384,7 +1384,7 @@
           }
         }
       ],
-      "last_price": 0.5828,
+      "last_price": 0.5813,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
