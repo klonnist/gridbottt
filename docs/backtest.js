@@ -118,7 +118,7 @@ function initCoinState(lower, upper, levels, marginUsd, leverage) {
     notionalPerCell: (marginUsd * leverage) / levels,
     marginUsd,
     leverage,
-    cells: Array.from({ length: levels }, () => ({ status: "empty", entryPrice: null, qty: null })),
+    cells: Array.from({ length: levels }, () => ({ status: "empty", entryPrice: null, qty: null, openedAt: null })),
     lastPrice: null,
     realizedPnl: 0,
     tradesCount: 0,
@@ -128,7 +128,8 @@ function initCoinState(lower, upper, levels, marginUsd, leverage) {
   };
 }
 
-/** Advances state by one price tick, pushing any fired trades into tradesOut. */
+/** Advances state by one price tick. Opening a cell is not a trade record --
+ * one round-trip (buy+sell) is pushed into tradesOut only when it closes. */
 function processTick(symbol, state, price, ts, tradesOut) {
   const prev = state.lastPrice;
   if (prev === null) {
@@ -142,9 +143,7 @@ function processTick(symbol, state, price, ts, tradesOut) {
       const line = lines[i];
       if (price <= line && line < prev && cells[i].status === "empty") {
         const qty = notional / line;
-        cells[i] = { status: "filled", entryPrice: line, qty };
-        state.tradesCount++;
-        tradesOut.push({ coin: symbol, side: "buy", price: line, qty, pnl: null, ts });
+        cells[i] = { status: "filled", entryPrice: line, qty, openedAt: ts };
       }
     }
   } else if (price > prev) {
@@ -159,8 +158,17 @@ function processTick(symbol, state, price, ts, tradesOut) {
         if (pnl > 0) state.wins++;
         else if (pnl < 0) state.losses++;
         else state.breakeven++;
-        tradesOut.push({ coin: symbol, side: "sell", price: line, qty: cell.qty, pnl, ts });
-        cells[idx] = { status: "empty", entryPrice: null, qty: null };
+        tradesOut.push({
+          coin: symbol,
+          side: "long",
+          entryPrice: cell.entryPrice,
+          exitPrice: line,
+          qty: cell.qty,
+          pnl,
+          openedAt: cell.openedAt,
+          closedAt: ts,
+        });
+        cells[idx] = { status: "empty", entryPrice: null, qty: null, openedAt: null };
       }
     }
   }
@@ -233,7 +241,7 @@ function computeMaxDrawdownPct(curve) {
 
 function aggregateStats(perCoinResults, initialTotalBalance, marginUsd) {
   const allTrades = perCoinResults.flatMap((r) => r.trades || []);
-  const closed = allTrades.filter((t) => t.side === "sell");
+  const closed = allTrades; // every recorded trade is already a closed round trip
   const wins = closed.filter((t) => t.pnl > 0).length;
   const losses = closed.filter((t) => t.pnl < 0).length;
   const breakeven = closed.filter((t) => t.pnl === 0).length;

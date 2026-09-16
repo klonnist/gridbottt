@@ -13,7 +13,9 @@ holds long lots -- there is no separate short-side grid. See README for the
 reasoning and how to extend it.
 
 Nothing here calls a broker: every "trade" is just a dict appended to a list
-and a balance/position number updated in memory.
+and a balance/position number updated in memory. A trade record represents a
+full round trip (buy then sell) in a single row -- opening a cell only
+updates its internal state, nothing is recorded until that cell closes.
 """
 
 import time
@@ -59,7 +61,10 @@ def init_coin_state(symbol: str, inst_id: str, lower: float, upper: float) -> di
         "notional_per_cell_usd": notional_per_cell,
         "margin_usd": config.MARGIN_PER_COIN_USD,
         "leverage": config.LEVERAGE,
-        "cells": [{"status": "empty", "entry_price": None, "qty": None} for _ in range(config.GRID_LEVELS)],
+        "cells": [
+            {"status": "empty", "entry_price": None, "qty": None, "opened_at": None}
+            for _ in range(config.GRID_LEVELS)
+        ],
         "last_price": None,
         "realized_pnl": 0.0,
         "trades_count": 0,
@@ -75,9 +80,9 @@ class RunResult:
     unrealized_pnl: float = 0.0
 
 
-def process_price_update(symbol: str, coin_state: dict, current_price: float) -> RunResult:
+def process_price_update(symbol: str, coin_state: dict, current_price: float, timestamp: str) -> RunResult:
     """Advances one coin's grid state given a new price tick and returns any
-    trades that fired. Mutates coin_state in place."""
+    round-trip trades that closed on this tick. Mutates coin_state in place."""
     result = RunResult()
     previous_price = coin_state["last_price"]
 
@@ -92,22 +97,13 @@ def process_price_update(symbol: str, coin_state: dict, current_price: float) ->
 
     if current_price < previous_price:
         # Price fell: fill any empty cell whose bottom line was crossed downward.
+        # Opening a cell is not itself a trade record -- it only becomes one
+        # once the matching sell closes it (see below).
         for i in range(len(cells)):
             line = lines[i]
             if current_price <= line < previous_price and cells[i]["status"] == "empty":
                 qty = notional / line
-                cells[i] = {"status": "filled", "entry_price": line, "qty": qty}
-                coin_state["trades_count"] += 1
-                result.trades.append(
-                    {
-                        "coin": symbol,
-                        "side": "buy",
-                        "price": line,
-                        "qty": qty,
-                        "pnl": None,
-                        "reason": "grid_buy",
-                    }
-                )
+                cells[i] = {"status": "filled", "entry_price": line, "qty": qty, "opened_at": timestamp}
 
     elif current_price > previous_price:
         # Price rose: close any filled cell whose top line was crossed upward.
@@ -126,14 +122,17 @@ def process_price_update(symbol: str, coin_state: dict, current_price: float) ->
                 result.trades.append(
                     {
                         "coin": symbol,
-                        "side": "sell",
-                        "price": line,
+                        "side": "long",
+                        "entry_price": cell["entry_price"],
+                        "exit_price": line,
                         "qty": cell["qty"],
                         "pnl": pnl,
-                        "reason": "grid_sell",
+                        "opened_at": cell["opened_at"],
+                        "closed_at": timestamp,
+                        "reason": "grid_round_trip",
                     }
                 )
-                cells[cell_idx] = {"status": "empty", "entry_price": None, "qty": None}
+                cells[cell_idx] = {"status": "empty", "entry_price": None, "qty": None, "opened_at": None}
 
     coin_state["last_price"] = current_price
     result.unrealized_pnl = sum(

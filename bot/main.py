@@ -79,7 +79,7 @@ def run_once() -> None:
                 continue
 
             coin_state = coins_state[symbol]
-            result = process_price_update(symbol, coin_state, price)
+            result = process_price_update(symbol, coin_state, price, run_timestamp)
             coin_state["unrealized_pnl"] = result.unrealized_pnl
             coin_state["balance"] = coin_state["margin_usd"] + coin_state["realized_pnl"]
             coin_state["equity"] = coin_state["balance"] + result.unrealized_pnl
@@ -87,7 +87,6 @@ def run_once() -> None:
             for trade in result.trades:
                 trade["id"] = state["meta"]["next_trade_id"]
                 state["meta"]["next_trade_id"] += 1
-                trade["timestamp"] = run_timestamp
                 trade["balance_after"] = coin_state["balance"]
                 new_trades.append(trade)
 

@@ -21,7 +21,7 @@ async function fetchJson(path, fallback) {
 }
 
 function computeCoinStats(symbol, coinState, trades) {
-  const coinTrades = trades.filter((t) => t.coin === symbol && t.side === "sell" && t.pnl !== null);
+  const coinTrades = trades.filter((t) => t.coin === symbol);
   const wins = coinTrades.filter((t) => t.pnl >= 0).length;
   const losses = coinTrades.filter((t) => t.pnl < 0).length;
   const totalClosed = wins + losses;
@@ -55,9 +55,8 @@ function renderSummary(state, allTrades) {
     (sum, c) => sum + (c.cells || []).filter((cell) => cell.status === "filled").length,
     0
   );
-  const closedTrades = allTrades.filter((t) => t.side === "sell" && t.pnl !== null);
-  const wins = closedTrades.filter((t) => t.pnl >= 0).length;
-  const winRate = closedTrades.length > 0 ? (wins / closedTrades.length) * 100 : 0;
+  const wins = allTrades.filter((t) => t.pnl >= 0).length;
+  const winRate = allTrades.length > 0 ? (wins / allTrades.length) * 100 : 0;
 
   document.getElementById("statBalance").textContent = fmtUsd(totalEquity);
   document.getElementById("statBalanceSub").textContent = `Başlangıç: ${fmtUsd(INITIAL_BALANCE)}`;
@@ -120,27 +119,26 @@ function populateCoinFilter(state) {
 function renderTrades(trades, filter) {
   const body = document.getElementById("tradesBody");
   const filtered = filter === "all" ? trades : trades.filter((t) => t.coin === filter);
-  const sorted = [...filtered].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  const sorted = [...filtered].sort((a, b) => new Date(b.closed_at) - new Date(a.closed_at));
 
   if (sorted.length === 0) {
-    body.innerHTML = `<tr><td colspan="6" class="empty-row">Henüz işlem yok</td></tr>`;
+    body.innerHTML = `<tr><td colspan="7" class="empty-row">Henüz işlem yok</td></tr>`;
     return;
   }
 
   body.innerHTML = sorted
     .slice(0, 300)
     .map((t) => {
-      const sideLabel = t.side === "buy" ? "AL (Long)" : "SAT";
-      const sideClass = t.side === "buy" ? "side-buy" : "side-sell";
-      const pnlText = t.pnl === null || t.pnl === undefined ? "-" : fmtUsd(t.pnl);
-      const pnlCls = t.pnl === null || t.pnl === undefined ? "" : pnlClass(t.pnl);
+      const cls = pnlClass(t.pnl);
+      const outcome = t.pnl > 0 ? "KAZANÇ" : t.pnl < 0 ? "KAYIP" : "BAŞABAŞ";
       return `<tr>
-        <td>${fmtDate(t.timestamp)}</td>
+        <td>${fmtDate(t.closed_at)}</td>
         <td>${t.coin}</td>
-        <td class="${sideClass}">${sideLabel}</td>
-        <td>${Number(t.price).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
+        <td class="${cls}">${outcome}</td>
+        <td>${Number(t.entry_price).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
+        <td>${Number(t.exit_price).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
         <td>${Number(t.qty).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
-        <td class="${pnlCls}">${pnlText}</td>
+        <td class="${cls}">${fmtUsd(t.pnl)}</td>
       </tr>`;
     })
     .join("");

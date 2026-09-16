@@ -92,7 +92,7 @@ function renderCoinTable(perCoinResults) {
     if (r.error) {
       return `<tr><td>${r.symbol}</td><td colspan="6" class="empty-row">${r.error}</td></tr>`;
     }
-    const closed = r.trades.filter((t) => t.side === "sell");
+    const closed = r.trades; // every recorded trade is already a closed round trip
     const wins = closed.filter((t) => t.pnl > 0).length;
     const losses = closed.filter((t) => t.pnl < 0).length;
     const breakeven = closed.filter((t) => t.pnl === 0).length;
@@ -112,7 +112,6 @@ function renderCoinTable(perCoinResults) {
 }
 
 function tradeOutcomeLabel(t) {
-  if (t.side === "buy") return "AL (Long)";
   if (t.pnl > 0) return "KAZANC";
   if (t.pnl < 0) return "KAYIP";
   return "BASABAS";
@@ -122,7 +121,7 @@ function renderTradesTable(perCoinResults) {
   const panel = document.getElementById("tradesPanel");
   panel.classList.remove("hidden");
   const allTrades = perCoinResults.flatMap((r) => r.trades || []);
-  allTrades.sort((a, b) => b.ts - a.ts);
+  allTrades.sort((a, b) => b.closedAt - a.closedAt);
 
   const filterSelect = document.getElementById("btCoinFilter");
   filterSelect.innerHTML =
@@ -133,20 +132,21 @@ function renderTradesTable(perCoinResults) {
     const filtered = filter === "all" ? allTrades : allTrades.filter((t) => t.coin === filter);
     const body = document.getElementById("btTradesBody");
     if (filtered.length === 0) {
-      body.innerHTML = `<tr><td colspan="6" class="empty-row">Islem yok</td></tr>`;
+      body.innerHTML = `<tr><td colspan="7" class="empty-row">Islem yok</td></tr>`;
       return;
     }
     body.innerHTML = filtered
       .slice(0, 500)
       .map((t) => {
-        const cls = t.side === "buy" ? "side-buy" : t.pnl > 0 ? "positive" : t.pnl < 0 ? "negative" : "";
+        const cls = pnlClass(t.pnl);
         return `<tr>
-          <td>${fmtDate(t.ts)}</td>
+          <td>${fmtDate(t.closedAt)}</td>
           <td>${t.coin}</td>
-          <td class="${t.side === "buy" ? "side-buy" : "side-sell"}">${tradeOutcomeLabel(t)}</td>
-          <td>${Number(t.price).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
+          <td class="${cls}">${tradeOutcomeLabel(t)}</td>
+          <td>${Number(t.entryPrice).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
+          <td>${Number(t.exitPrice).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
           <td>${Number(t.qty).toLocaleString("en-US", { maximumFractionDigits: 6 })}</td>
-          <td class="${cls}">${t.pnl === null ? "-" : fmtUsd(t.pnl)}</td>
+          <td class="${cls}">${fmtUsd(t.pnl)}</td>
         </tr>`;
       })
       .join("");
