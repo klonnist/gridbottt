@@ -1,0 +1,262 @@
+:root {
+  --bg: #0b0e14;
+  --panel: #131722;
+  --panel-border: #232838;
+  --text: #e6e9f0;
+  --text-dim: #8b93a7;
+  --green: #26a69a;
+  --red: #ef5350;
+  --accent: #5b8def;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.topbar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--panel-border);
+  padding: 16px 20px;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.topbar h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  background: #3a2f0d;
+  color: #f0c93a;
+  border: 1px solid #6b551a;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.run-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.stat-sub {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.positive { color: var(--green); }
+.negative { color: var(--red); }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  font-size: 1.05rem;
+  margin: 0 0 12px 0;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.panel-header h2 { margin: 0; }
+
+.chart-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  color: var(--text-dim);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.coin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.coin-card {
+  background: #0f1420;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.coin-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.coin-symbol {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.coin-rank {
+  font-size: 0.7rem;
+  background: #1c2233;
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.coin-rank.rank-1 { background: #23361f; color: #6fcf58; }
+
+.coin-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  padding: 3px 0;
+  color: var(--text-dim);
+}
+
+.coin-stat-row b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--panel-border);
+  white-space: nowrap;
+}
+
+th {
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.empty-row {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 20px;
+}
+
+select, #coinFilter {
+  background: #0f1420;
+  color: var(--text);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.side-buy { color: var(--green); font-weight: 600; }
+.side-sell { color: var(--accent); font-weight: 600; }
+
+.footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  padding: 10px 0 30px;
+}
+
+.footer a { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .summary-grid { grid-template-columns: repeat(2, 1fr); }
+  .coin-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .summary-grid { grid-template-columns: 1fr; }
+  .coin-grid { grid-template-columns: 1fr; }
+  .run-info { align-items: flex-start; }
+  .topbar-inner { flex-direction: column; align-items: flex-start; }
+}

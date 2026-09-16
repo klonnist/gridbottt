@@ -1,0 +1,44 @@
+name: Grid Bot Run
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grid-bot-run
+  cancel-in-progress: false
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run grid bot (one tick)
+        run: python -m bot.main
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "gridbottt-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/state.json data/trades.json data/equity_history.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "bot: update state/trades $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 5
+          done

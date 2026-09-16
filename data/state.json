@@ -1,0 +1,678 @@
+{
+  "meta": {
+    "started_at": "2026-09-16T10:11:49.138052+00:00",
+    "initial_balance_usd": 10000.0,
+    "leverage": 3,
+    "next_trade_id": 1,
+    "last_run_at": "2026-09-16T10:12:07.416999+00:00",
+    "total_equity": 10000.0,
+    "total_realized_pnl": 0.0,
+    "total_unrealized_pnl": 0
+  },
+  "coins": {
+    "BTC": {
+      "inst_id": "BTC-USDT-SWAP",
+      "lower": 71151.77,
+      "upper": 86393.895,
+      "grid_levels": 10,
+      "grid_lines": [
+        71151.77,
+        72675.9825,
+        74200.195,
+        75724.4075,
+        77248.62000000001,
+        78772.8325,
+        80297.04500000001,
+        81821.2575,
+        83345.47,
+        84869.68250000001,
+        86393.895
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 75943.1,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553509,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "ETH": {
+      "inst_id": "ETH-USDT-SWAP",
+      "lower": 2238.3709999999996,
+      "upper": 2800.7175,
+      "grid_levels": 10,
+      "grid_lines": [
+        2238.3709999999996,
+        2294.6056499999995,
+        2350.8403,
+        2407.0749499999997,
+        2463.3096,
+        2519.54425,
+        2575.7789000000002,
+        2632.01355,
+        2688.2482,
+        2744.4828500000003,
+        2800.7175
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 2401.83,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553510,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "XRP": {
+      "inst_id": "XRP-USDT-SWAP",
+      "lower": 1.200135,
+      "upper": 1.56597,
+      "grid_levels": 10,
+      "grid_lines": [
+        1.200135,
+        1.2367185,
+        1.273302,
+        1.3098855,
+        1.346469,
+        1.3830525,
+        1.4196360000000001,
+        1.4562195,
+        1.492803,
+        1.5293865,
+        1.56597
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 1.2876,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553511,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "AVAX": {
+      "inst_id": "AVAX-USDT-SWAP",
+      "lower": 6.73075,
+      "upper": 8.6058,
+      "grid_levels": 10,
+      "grid_lines": [
+        6.73075,
+        6.918254999999999,
+        7.10576,
+        7.293265,
+        7.48077,
+        7.6682749999999995,
+        7.85578,
+        8.043285000000001,
+        8.23079,
+        8.418295,
+        8.6058
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 7.262,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553512,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "SOL": {
+      "inst_id": "SOL-USDT-SWAP",
+      "lower": 90.877,
+      "upper": 112.665,
+      "grid_levels": 10,
+      "grid_lines": [
+        90.877,
+        93.05579999999999,
+        95.2346,
+        97.4134,
+        99.5922,
+        101.771,
+        103.94980000000001,
+        106.1286,
+        108.3074,
+        110.48620000000001,
+        112.665
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 97.12,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553513,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "DOT": {
+      "inst_id": "DOT-USDT-SWAP",
+      "lower": 0.79534,
+      "upper": 1.3486200000000002,
+      "grid_levels": 10,
+      "grid_lines": [
+        0.79534,
+        0.8506680000000001,
+        0.905996,
+        0.9613240000000001,
+        1.0166520000000001,
+        1.0719800000000002,
+        1.1273080000000002,
+        1.182636,
+        1.237964,
+        1.293292,
+        1.3486200000000002
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 0.9562,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553514,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "NEAR": {
+      "inst_id": "NEAR-USDT-SWAP",
+      "lower": 1.73755,
+      "upper": 2.8644000000000003,
+      "grid_levels": 10,
+      "grid_lines": [
+        1.73755,
+        1.850235,
+        1.96292,
+        2.075605,
+        2.1882900000000003,
+        2.300975,
+        2.41366,
+        2.526345,
+        2.63903,
+        2.751715,
+        2.8644000000000003
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 2.412,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553515,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    },
+    "ETHFI": {
+      "inst_id": "ETHFI-USDT-SWAP",
+      "lower": 0.510055,
+      "upper": 0.81753,
+      "grid_levels": 10,
+      "grid_lines": [
+        0.510055,
+        0.5408025000000001,
+        0.57155,
+        0.6022975,
+        0.633045,
+        0.6637925,
+        0.6945399999999999,
+        0.7252875,
+        0.756035,
+        0.7867824999999999,
+        0.81753
+      ],
+      "notional_per_cell_usd": 375.0,
+      "margin_usd": 1250.0,
+      "leverage": 3,
+      "cells": [
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        },
+        {
+          "status": "empty",
+          "entry_price": null,
+          "qty": null
+        }
+      ],
+      "last_price": 0.5869,
+      "realized_pnl": 0.0,
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "grid_initialized_at": 1789553515,
+      "unrealized_pnl": 0,
+      "balance": 1250.0,
+      "equity": 1250.0
+    }
+  }
+}

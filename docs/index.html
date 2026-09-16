@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grid Bot Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1>📊 Grid Trading Bot <span class="badge">PAPER TRADING</span></h1>
+    <div class="run-info">
+      <span id="lastRun">Son çalışma: -</span>
+      <span id="lastUpdate">Veri güncelleme: -</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="summary-grid" id="summaryGrid">
+    <div class="stat-card">
+      <div class="stat-label">Toplam Bakiye</div>
+      <div class="stat-value" id="statBalance">-</div>
+      <div class="stat-sub" id="statBalanceSub">Başlangıç: $10,000.00</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Toplam Kâr/Zarar</div>
+      <div class="stat-value" id="statPnl">-</div>
+      <div class="stat-sub" id="statPnlPct">-</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Açık Pozisyon Sayısı</div>
+      <div class="stat-value" id="statOpenPositions">-</div>
+      <div class="stat-sub">8 coin arasında</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Toplam İşlem</div>
+      <div class="stat-value" id="statTotalTrades">-</div>
+      <div class="stat-sub" id="statWinRate">-</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Bakiye Değişimi (Equity Curve)</h2>
+      <div class="chart-toggle" id="chartToggle">
+        <button class="toggle-btn active" data-mode="total">Toplam</button>
+        <button class="toggle-btn" data-mode="perCoin">Coin Bazlı</button>
+      </div>
+    </div>
+    <canvas id="equityChart" height="90"></canvas>
+  </section>
+
+  <section class="panel">
+    <h2>Coin Performansı</h2>
+    <div class="coin-grid" id="coinGrid">
+      <!-- coin cards injected by app.js -->
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>İşlem Geçmişi</h2>
+      <select id="coinFilter">
+        <option value="all">Tüm coinler</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table id="tradesTable">
+        <thead>
+          <tr>
+            <th>Zaman</th>
+            <th>Coin</th>
+            <th>Yön</th>
+            <th>Fiyat</th>
+            <th>Miktar</th>
+            <th>Sonuç (PnL)</th>
+          </tr>
+        </thead>
+        <tbody id="tradesBody">
+          <tr><td colspan="6" class="empty-row">Yükleniyor...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>⚠️ Bu tamamen bir <strong>simülasyondur (paper trading)</strong>. Gerçek para veya gerçek borsa emri kullanılmamaktadır.
+    Tüm fiyatlar OKX'in genel (public) piyasa verisi API'sinden çekilir. Yatırım tavsiyesi değildir.</p>
+    <p><a href="https://github.com/klonnist/gridbottt" target="_blank" rel="noopener">GitHub Repository</a></p>
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
