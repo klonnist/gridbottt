@@ -4,10 +4,10 @@
     "initial_balance_usd": 10000.0,
     "leverage": 3,
     "next_trade_id": 2,
-    "last_run_at": "2026-09-16T23:34:39.162979+00:00",
-    "total_equity": 9992.475463836794,
+    "last_run_at": "2026-09-16T23:47:17.562863+00:00",
+    "total_equity": 9986.435478298574,
     "total_realized_pnl": 10.774201642658253,
-    "total_unrealized_pnl": -18.29873780586337
+    "total_unrealized_pnl": -24.33872334408468
   },
   "coins": {
     "BTC": {
@@ -173,7 +173,7 @@
           }
         }
       ],
-      "last_price": 76099.5,
+      "last_price": 76190.4,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -346,7 +346,7 @@
           }
         }
       ],
-      "last_price": 2414.59,
+      "last_price": 2419.69,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -519,15 +519,15 @@
           }
         }
       ],
-      "last_price": 1.2968,
+      "last_price": 1.3009,
       "realized_pnl": 10.774201642658253,
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
       "grid_initialized_at": 1789553511,
-      "unrealized_pnl": -6.920392805477419,
+      "unrealized_pnl": -8.1278832515774,
       "balance": 1260.7742016426582,
-      "equity": 1253.8538088371808
+      "equity": 1252.6463183910807
     },
     "AVAX": {
       "inst_id": "AVAX-USDT-SWAP",
@@ -692,7 +692,7 @@
           }
         }
       ],
-      "last_price": 7.437,
+      "last_price": 7.463,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -865,7 +865,7 @@
           }
         }
       ],
-      "last_price": 98.46,
+      "last_price": 98.66,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -947,10 +947,10 @@
             "opened_at": null
           },
           "short": {
-            "status": "empty",
-            "entry_price": null,
-            "qty": null,
-            "opened_at": null
+            "status": "filled",
+            "entry_price": 1.0166520000000001,
+            "qty": 368.8577802433871,
+            "opened_at": "2026-09-16T23:47:17.562863+00:00"
           }
         },
         {
@@ -1038,15 +1038,15 @@
           }
         }
       ],
-      "last_price": 1.0107,
+      "last_price": 1.0209,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553514,
-      "unrealized_pnl": 0.0,
+      "unrealized_pnl": -1.5669078504738374,
       "balance": 1250.0,
-      "equity": 1250.0
+      "equity": 1248.4330921495261
     },
     "NEAR": {
       "inst_id": "NEAR-USDT-SWAP",
@@ -1211,15 +1211,15 @@
           }
         }
       ],
-      "last_price": 2.603,
+      "last_price": 2.625,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553515,
-      "unrealized_pnl": -11.378345000385954,
+      "unrealized_pnl": -14.643932242033443,
       "balance": 1250.0,
-      "equity": 1238.621654999614
+      "equity": 1235.3560677579665
     },
     "ETHFI": {
       "inst_id": "ETHFI-USDT-SWAP",
@@ -1384,7 +1384,7 @@
           }
         }
       ],
-      "last_price": 0.5897,
+      "last_price": 0.5885,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
