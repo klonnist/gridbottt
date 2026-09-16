@@ -4,10 +4,10 @@
     "initial_balance_usd": 10000.0,
     "leverage": 3,
     "next_trade_id": 1,
-    "last_run_at": "2026-09-16T12:29:19.699112+00:00",
-    "total_equity": 9998.979112424387,
+    "last_run_at": "2026-09-16T12:44:38.206647+00:00",
+    "total_equity": 9998.750042835249,
     "total_realized_pnl": 0.0,
-    "total_unrealized_pnl": -1.0208875756120257
+    "total_unrealized_pnl": -1.249957164750834
   },
   "coins": {
     "BTC": {
@@ -33,63 +33,153 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 75877.4,
+      "last_price": 75935.0,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553509,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 0.0,
       "balance": 1250.0,
       "equity": 1250.0
     },
@@ -116,66 +206,155 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "filled",
-          "entry_price": 2407.0749499999997,
-          "qty": 0.1557907451116136,
-          "opened_at": "2026-09-16T12:29:19.699112+00:00"
+          "long": {
+            "status": "filled",
+            "entry_price": 2407.0749499999997,
+            "qty": 0.1557907451116136,
+            "opened_at": "2026-09-16T12:29:19.699112+00:00"
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 2404.9,
+      "last_price": 2406.4,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553510,
-      "unrealized_pnl": -0.3388370810804457,
+      "unrealized_pnl": -0.10515096341302532,
       "balance": 1250.0,
-      "equity": 1249.6611629189194
+      "equity": 1249.894849036587
     },
     "XRP": {
       "inst_id": "XRP-USDT-SWAP",
@@ -200,63 +379,153 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 1.281,
+      "last_price": 1.2813,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553511,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 0.0,
       "balance": 1250.0,
       "equity": 1250.0
     },
@@ -283,66 +552,155 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "filled",
-          "entry_price": 7.293265,
-          "qty": 51.41730075624566,
-          "opened_at": "2026-09-16T12:29:19.699112+00:00"
+          "long": {
+            "status": "filled",
+            "entry_price": 7.293265,
+            "qty": 51.41730075624566,
+            "opened_at": "2026-09-16T12:29:19.699112+00:00"
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 7.28,
+      "last_price": 7.271,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553512,
-      "unrealized_pnl": -0.6820504945315801,
+      "unrealized_pnl": -1.1448062013378086,
       "balance": 1250.0,
-      "equity": 1249.3179495054685
+      "equity": 1248.8551937986622
     },
     "SOL": {
       "inst_id": "SOL-USDT-SWAP",
@@ -367,63 +725,153 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 97.46,
+      "last_price": 97.42,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553513,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 0.0,
       "balance": 1250.0,
       "equity": 1250.0
     },
@@ -450,63 +898,153 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 0.9787,
+      "last_price": 0.9764,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553514,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 0.0,
       "balance": 1250.0,
       "equity": 1250.0
     },
@@ -533,63 +1071,153 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 2.459,
+      "last_price": 2.471,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553515,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 0.0,
       "balance": 1250.0,
       "equity": 1250.0
     },
@@ -616,63 +1244,153 @@
       "leverage": 3,
       "cells": [
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         },
         {
-          "status": "empty",
-          "entry_price": null,
-          "qty": null
+          "long": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          },
+          "short": {
+            "status": "empty",
+            "entry_price": null,
+            "qty": null,
+            "opened_at": null
+          }
         }
       ],
-      "last_price": 0.5896,
+      "last_price": 0.5888,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
       "grid_initialized_at": 1789553515,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 0.0,
       "balance": 1250.0,
       "equity": 1250.0
     }
