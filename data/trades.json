@@ -50,5 +50,18 @@
     "reason": "grid_round_trip",
     "id": 4,
     "balance_after": 1266.0122753435921
+  },
+  {
+    "coin": "ETH",
+    "side": "long",
+    "entry_price": 2407.0749499999997,
+    "exit_price": 2463.3096,
+    "qty": 0.1557907451116136,
+    "pnl": 8.760838024590852,
+    "opened_at": "2026-09-16T12:29:19.699112+00:00",
+    "closed_at": "2026-09-17T12:28:59.199089+00:00",
+    "reason": "grid_round_trip",
+    "id": 5,
+    "balance_after": 1258.7608380245908
   }
 ]
