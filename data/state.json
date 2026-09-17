@@ -3,11 +3,11 @@
     "started_at": "2026-09-16T10:11:49.138052+00:00",
     "initial_balance_usd": 10000.0,
     "leverage": 3,
-    "next_trade_id": 4,
-    "last_run_at": "2026-09-17T08:49:55.006721+00:00",
-    "total_equity": 9964.226507600728,
-    "total_realized_pnl": 28.802652396861646,
-    "total_unrealized_pnl": -64.57614479613312
+    "next_trade_id": 5,
+    "last_run_at": "2026-09-17T09:03:27.767129+00:00",
+    "total_equity": 9954.808292687154,
+    "total_realized_pnl": 44.81492774045378,
+    "total_unrealized_pnl": -90.00663505329948
   },
   "coins": {
     "BTC": {
@@ -173,7 +173,7 @@
           }
         }
       ],
-      "last_price": 76452.4,
+      "last_price": 76600.3,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -346,7 +346,7 @@
           }
         }
       ],
-      "last_price": 2441.55,
+      "last_price": 2444.66,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -519,15 +519,15 @@
           }
         }
       ],
-      "last_price": 1.3019,
+      "last_price": 1.3039,
       "realized_pnl": 10.774201642658253,
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
       "grid_initialized_at": 1789553511,
-      "unrealized_pnl": -8.422393116479867,
+      "unrealized_pnl": -9.011412846284736,
       "balance": 1260.7742016426582,
-      "equity": 1252.3518085261783
+      "equity": 1251.7627887963736
     },
     "AVAX": {
       "inst_id": "AVAX-USDT-SWAP",
@@ -692,15 +692,15 @@
           }
         }
       ],
-      "last_price": 7.573,
+      "last_price": 7.599,
       "realized_pnl": 9.641000978299832,
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
       "grid_initialized_at": 1789553512,
-      "unrealized_pnl": -14.383218627048405,
+      "unrealized_pnl": -15.720068446710783,
       "balance": 1259.6410009782999,
-      "equity": 1245.2577823512515
+      "equity": 1243.9209325315892
     },
     "SOL": {
       "inst_id": "SOL-USDT-SWAP",
@@ -865,15 +865,15 @@
           }
         }
       ],
-      "last_price": 100.18,
+      "last_price": 100.38,
       "realized_pnl": 8.387449775903558,
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
       "grid_initialized_at": 1789553513,
-      "unrealized_pnl": -10.650228818622534,
+      "unrealized_pnl": -11.420143429959328,
       "balance": 1258.3874497759036,
-      "equity": 1247.7372209572811
+      "equity": 1246.9673063459443
     },
     "DOT": {
       "inst_id": "DOT-USDT-SWAP",
@@ -1038,7 +1038,7 @@
           }
         }
       ],
-      "last_price": 1.0142,
+      "last_price": 1.0158,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
@@ -1184,16 +1184,16 @@
         },
         {
           "long": {
-            "status": "filled",
-            "entry_price": 2.63903,
-            "qty": 142.097664672247,
-            "opened_at": "2026-09-17T02:03:30.647703+00:00"
-          },
-          "short": {
             "status": "empty",
             "entry_price": null,
             "qty": null,
             "opened_at": null
+          },
+          "short": {
+            "status": "filled",
+            "entry_price": 2.751715,
+            "qty": 136.27864804312946,
+            "opened_at": "2026-09-17T09:03:27.767129+00:00"
           }
         },
         {
@@ -1211,15 +1211,15 @@
           }
         }
       ],
-      "last_price": 2.736,
-      "realized_pnl": 0.0,
-      "trades_count": 0,
-      "wins": 0,
+      "last_price": 2.762,
+      "realized_pnl": 16.01227534359214,
+      "trades_count": 1,
+      "wins": 1,
       "losses": 0,
       "grid_initialized_at": 1789553515,
-      "unrealized_pnl": -31.120304233982317,
-      "balance": 1250.0,
-      "equity": 1218.8796957660177
+      "unrealized_pnl": -53.855010330344626,
+      "balance": 1266.0122753435921,
+      "equity": 1212.1572650132475
     },
     "ETHFI": {
       "inst_id": "ETHFI-USDT-SWAP",
@@ -1384,7 +1384,7 @@
           }
         }
       ],
-      "last_price": 0.6041,
+      "last_price": 0.6025,
       "realized_pnl": 0.0,
       "trades_count": 0,
       "wins": 0,
