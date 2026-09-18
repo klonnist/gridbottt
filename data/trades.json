@@ -115,5 +115,31 @@
     "reason": "grid_round_trip",
     "id": 9,
     "balance_after": 1269.1438823837057
+  },
+  {
+    "coin": "BTC",
+    "side": "long",
+    "entry_price": 75724.4075,
+    "exit_price": 77248.62000000001,
+    "qty": 0.004952168163217388,
+    "pnl": 7.5481566164780265,
+    "opened_at": "2026-09-16T13:25:31.357382+00:00",
+    "closed_at": "2026-09-18T03:22:42.712278+00:00",
+    "reason": "grid_round_trip",
+    "id": 10,
+    "balance_after": 1257.548156616478
+  },
+  {
+    "coin": "SOL",
+    "side": "long",
+    "entry_price": 101.771,
+    "exit_price": 103.94980000000001,
+    "qty": 3.6847431979640564,
+    "pnl": 8.028318479724122,
+    "opened_at": "2026-09-17T17:49:15.199079+00:00",
+    "closed_at": "2026-09-18T03:22:42.712278+00:00",
+    "reason": "grid_round_trip",
+    "id": 11,
+    "balance_after": 1274.6197239871005
   }
 ]
