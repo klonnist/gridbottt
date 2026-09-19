@@ -271,5 +271,18 @@
     "reason": "grid_round_trip",
     "id": 21,
     "balance_after": 1277.5831973454676
+  },
+  {
+    "coin": "AVAX",
+    "side": "short",
+    "entry_price": 8.6058,
+    "exit_price": 8.418295,
+    "qty": 43.575263194589695,
+    "pnl": 8.170579725301533,
+    "opened_at": "2026-09-19T01:48:28.032854+00:00",
+    "closed_at": "2026-09-19T04:35:01.204875+00:00",
+    "reason": "grid_round_trip",
+    "id": 22,
+    "balance_after": 1285.753777070769
   }
 ]
