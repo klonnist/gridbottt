@@ -427,5 +427,18 @@
     "reason": "grid_round_trip",
     "id": 33,
     "balance_after": 1283.520825857937
+  },
+  {
+    "coin": "SOL",
+    "side": "long",
+    "entry_price": 108.3074,
+    "exit_price": 110.48620000000001,
+    "qty": 3.4623672990026537,
+    "pnl": 7.543805871067015,
+    "opened_at": "2026-09-20T03:03:00.845349+00:00",
+    "closed_at": "2026-09-20T20:03:07.408693+00:00",
+    "reason": "grid_round_trip",
+    "id": 34,
+    "balance_after": 1311.9043213677096
   }
 ]
