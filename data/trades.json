@@ -518,5 +518,18 @@
     "reason": "grid_round_trip",
     "id": 40,
     "balance_after": 1278.6378946680625
+  },
+  {
+    "coin": "DOT",
+    "side": "long",
+    "entry_price": 1.1273080000000002,
+    "exit_price": 1.182636,
+    "qty": 332.65088156918955,
+    "pnl": 18.40490797546006,
+    "opened_at": "2026-09-18T05:48:47.617919+00:00",
+    "closed_at": "2026-09-21T09:24:20.874865+00:00",
+    "reason": "grid_round_trip",
+    "id": 41,
+    "balance_after": 1308.1679099504436
   }
 ]
