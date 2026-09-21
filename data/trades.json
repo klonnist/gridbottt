@@ -492,5 +492,18 @@
     "reason": "grid_round_trip",
     "id": 38,
     "balance_after": 1319.299362558374
+  },
+  {
+    "coin": "XRP",
+    "side": "long",
+    "entry_price": 1.4196360000000001,
+    "exit_price": 1.4562195,
+    "qty": 264.15221930128564,
+    "pnl": 9.66361271480855,
+    "opened_at": "2026-09-19T00:53:26.250340+00:00",
+    "closed_at": "2026-09-21T08:37:05.990000+00:00",
+    "reason": "grid_round_trip",
+    "id": 39,
+    "balance_after": 1310.4131735963663
   }
 ]
