@@ -4,10 +4,10 @@
     "initial_balance_usd": 10000.0,
     "leverage": 3,
     "next_trade_id": 43,
-    "last_run_at": "2026-09-21T13:50:19.803572+00:00",
-    "total_equity": 7136.095322419273,
+    "last_run_at": "2026-09-21T14:03:21.440549+00:00",
+    "total_equity": 7144.2177859140465,
     "total_realized_pnl": 464.6088748896675,
-    "total_unrealized_pnl": -3328.513552470395
+    "total_unrealized_pnl": -3320.3910889756207
   },
   "coins": {
     "BTC": {
@@ -173,15 +173,15 @@
           }
         }
       ],
-      "last_price": 85551.2,
+      "last_price": 85406.0,
       "realized_pnl": 28.63789466806241,
       "trades_count": 4,
       "wins": 4,
       "losses": 0,
       "grid_initialized_at": 1789553509,
-      "unrealized_pnl": -175.80533982674024,
+      "unrealized_pnl": -171.0517310481043,
       "balance": 1278.6378946680625,
-      "equity": 1102.8325548413222
+      "equity": 1107.5861636199581
     },
     "ETH": {
       "inst_id": "ETH-USDT-SWAP",
@@ -346,15 +346,15 @@
           }
         }
       ],
-      "last_price": 2735.29,
+      "last_price": 2731.25,
       "realized_pnl": 41.53294029025078,
       "trades_count": 5,
       "wins": 5,
       "losses": 0,
       "grid_initialized_at": 1789553510,
-      "unrealized_pnl": -162.58563054069825,
+      "unrealized_pnl": -159.57613394348755,
       "balance": 1291.5329402902507,
-      "equity": 1128.9473097495525
+      "equity": 1131.9568063467632
     },
     "XRP": {
       "inst_id": "XRP-USDT-SWAP",
@@ -519,15 +519,15 @@
           }
         }
       ],
-      "last_price": 1.4909,
+      "last_price": 1.4877,
       "realized_pnl": 60.413173596366356,
       "trades_count": 6,
       "wins": 6,
       "losses": 0,
       "grid_initialized_at": 1789553511,
-      "unrealized_pnl": -213.12838381796055,
+      "unrealized_pnl": -207.84163700179775,
       "balance": 1310.4131735963663,
-      "equity": 1097.2847897784056
+      "equity": 1102.5715365945684
     },
     "AVAX": {
       "inst_id": "AVAX-USDT-SWAP",
@@ -692,15 +692,15 @@
           }
         }
       ],
-      "last_price": 11.252,
+      "last_price": 11.238,
       "realized_pnl": 44.106344306771106,
       "trades_count": 5,
       "wins": 5,
       "losses": 0,
       "grid_initialized_at": 1789553512,
-      "unrealized_pnl": -1258.754206486429,
+      "unrealized_pnl": -1253.4553654900892,
       "balance": 1294.106344306771,
-      "equity": 35.35213782034202
+      "equity": 40.6509788166818
     },
     "SOL": {
       "inst_id": "SOL-USDT-SWAP",
@@ -865,15 +865,15 @@
           }
         }
       ],
-      "last_price": 117.76,
+      "last_price": 118.5,
       "realized_pnl": 69.29936255837403,
       "trades_count": 9,
       "wins": 9,
       "losses": 0,
       "grid_initialized_at": 1789553513,
-      "unrealized_pnl": -370.9434611068662,
+      "unrealized_pnl": -392.1263598943921,
       "balance": 1319.299362558374,
-      "equity": 948.3559014515079
+      "equity": 927.1730026639818
     },
     "DOT": {
       "inst_id": "DOT-USDT-SWAP",
@@ -1038,15 +1038,15 @@
           }
         }
       ],
-      "last_price": 1.1825,
+      "last_price": 1.1801,
       "realized_pnl": 58.16790995044363,
       "trades_count": 3,
       "wins": 3,
       "losses": 0,
       "grid_initialized_at": 1789553514,
-      "unrealized_pnl": -118.1960944982582,
+      "unrealized_pnl": -115.67290580752159,
       "balance": 1308.1679099504436,
-      "equity": 1189.9718154521854
+      "equity": 1192.495004142922
     },
     "NEAR": {
       "inst_id": "NEAR-USDT-SWAP",
@@ -1211,15 +1211,15 @@
           }
         }
       ],
-      "last_price": 4.134,
+      "last_price": 4.126,
       "realized_pnl": 16.01227534359214,
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
       "grid_initialized_at": 1789553515,
-      "unrealized_pnl": -805.6540260663033,
+      "unrealized_pnl": -801.1921895378732,
       "balance": 1266.0122753435921,
-      "equity": 460.3582492772888
+      "equity": 464.8200858057189
     },
     "ETHFI": {
       "inst_id": "ETHFI-USDT-SWAP",
@@ -1384,15 +1384,15 @@
           }
         }
       ],
-      "last_price": 0.7397,
+      "last_price": 0.7383,
       "realized_pnl": 146.43897417580703,
       "trades_count": 9,
       "wins": 9,
       "losses": 0,
       "grid_initialized_at": 1789553515,
-      "unrealized_pnl": -223.44641012713942,
+      "unrealized_pnl": -219.47476625235487,
       "balance": 1396.438974175807,
-      "equity": 1172.9925640486676
+      "equity": 1176.9642079234522
     }
   }
 }
