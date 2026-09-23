@@ -635,5 +635,70 @@
     "reason": "grid_round_trip",
     "id": 49,
     "balance_after": 1460.0865200718576
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 86393.895,
+    "exit_price": 84869.68250000001,
+    "qty": 0.004340584482271577,
+    "pnl": 6.6159731251843406,
+    "opened_at": "2026-09-21T19:35:28.489289+00:00",
+    "closed_at": "2026-09-23T14:24:39.726398+00:00",
+    "reason": "grid_round_trip",
+    "id": 50,
+    "balance_after": 1285.2538677932469
+  },
+  {
+    "coin": "ETH",
+    "side": "short",
+    "entry_price": 2744.4828500000003,
+    "exit_price": 2688.2482,
+    "qty": 0.1366377640144481,
+    "pnl": 7.683776836135129,
+    "opened_at": "2026-09-21T14:50:42.053191+00:00",
+    "closed_at": "2026-09-23T14:24:39.726398+00:00",
+    "reason": "grid_round_trip",
+    "id": 51,
+    "balance_after": 1307.0612285632392
+  },
+  {
+    "coin": "XRP",
+    "side": "short",
+    "entry_price": 1.56597,
+    "exit_price": 1.5293865,
+    "qty": 239.46818904576716,
+    "pnl": 8.760584493955847,
+    "opened_at": "2026-09-22T13:50:52.168344+00:00",
+    "closed_at": "2026-09-23T14:24:39.726398+00:00",
+    "reason": "grid_round_trip",
+    "id": 52,
+    "balance_after": 1337.3338675273253
+  },
+  {
+    "coin": "DOT",
+    "side": "short",
+    "entry_price": 1.182636,
+    "exit_price": 1.1273080000000002,
+    "qty": 317.0882672267714,
+    "pnl": 17.54385964912275,
+    "opened_at": "2026-09-21T09:24:20.874865+00:00",
+    "closed_at": "2026-09-23T14:24:39.726398+00:00",
+    "reason": "grid_round_trip",
+    "id": 53,
+    "balance_after": 1325.7117695995664
+  },
+  {
+    "coin": "ETHFI",
+    "side": "short",
+    "entry_price": 0.6945399999999999,
+    "exit_price": 0.6637925,
+    "qty": 539.9257062228238,
+    "pnl": 16.601365652086237,
+    "opened_at": "2026-09-18T11:48:06.210095+00:00",
+    "closed_at": "2026-09-23T14:24:39.726398+00:00",
+    "reason": "grid_round_trip",
+    "id": 54,
+    "balance_after": 1476.687885723944
   }
 ]
