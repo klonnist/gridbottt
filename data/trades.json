@@ -713,5 +713,18 @@
     "reason": "grid_round_trip",
     "id": 55,
     "balance_after": 1346.3040084956156
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 84869.68250000001,
+    "exit_price": 83345.47,
+    "qty": 0.004418538975917577,
+    "pnl": 6.734792338830808,
+    "opened_at": "2026-09-21T12:26:39.521280+00:00",
+    "closed_at": "2026-09-24T09:24:46.803911+00:00",
+    "reason": "grid_round_trip",
+    "id": 56,
+    "balance_after": 1291.9886601320775
   }
 ]
