@@ -1480,5 +1480,31 @@
     "reason": "grid_round_trip",
     "id": 114,
     "balance_after": 1762.6568999711735
+  },
+  {
+    "coin": "XRP",
+    "side": "long",
+    "entry_price": 1.346469,
+    "exit_price": 1.3830525,
+    "qty": 278.5062262851948,
+    "pnl": 10.188732529304453,
+    "opened_at": "2026-10-08T17:38:49.892516+00:00",
+    "closed_at": "2026-10-09T02:21:37.860623+00:00",
+    "reason": "grid_round_trip",
+    "id": 115,
+    "balance_after": 1485.5082542062596
+  },
+  {
+    "coin": "DOT",
+    "side": "long",
+    "entry_price": 1.0719800000000002,
+    "exit_price": 1.1273080000000002,
+    "qty": 349.81995932759935,
+    "pnl": 19.35483870967743,
+    "opened_at": "2026-10-08T17:38:49.892516+00:00",
+    "closed_at": "2026-10-09T02:21:37.860623+00:00",
+    "reason": "grid_round_trip",
+    "id": 116,
+    "balance_after": 1466.5264773796985
   }
 ]
