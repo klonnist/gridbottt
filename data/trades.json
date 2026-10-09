@@ -1506,5 +1506,31 @@
     "reason": "grid_round_trip",
     "id": 116,
     "balance_after": 1466.5264773796985
+  },
+  {
+    "coin": "SOL",
+    "side": "long",
+    "entry_price": 108.3074,
+    "exit_price": 110.48620000000001,
+    "qty": 3.4623672990026537,
+    "pnl": 7.543805871067015,
+    "opened_at": "2026-10-08T17:38:49.892516+00:00",
+    "closed_at": "2026-10-09T09:21:22.825358+00:00",
+    "reason": "grid_round_trip",
+    "id": 117,
+    "balance_after": 1341.4902399755842
+  },
+  {
+    "coin": "ETHFI",
+    "side": "long",
+    "entry_price": 0.6637925,
+    "exit_price": 0.6945399999999999,
+    "qty": 564.9355785128636,
+    "pnl": 17.370356700324233,
+    "opened_at": "2026-10-08T17:38:49.892516+00:00",
+    "closed_at": "2026-10-09T09:21:22.825358+00:00",
+    "reason": "grid_round_trip",
+    "id": 118,
+    "balance_after": 1780.0272566714978
   }
 ]
