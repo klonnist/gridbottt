@@ -1701,5 +1701,83 @@
     "reason": "grid_round_trip",
     "id": 131,
     "balance_after": 1380.4943842040009
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 83345.47,
+    "exit_price": 81821.2575,
+    "qty": 0.004499344715435644,
+    "pnl": 6.8579574570759245,
+    "opened_at": "2026-10-11T16:22:12.616160+00:00",
+    "closed_at": "2026-10-14T15:04:53.901887+00:00",
+    "reason": "grid_round_trip",
+    "id": 132,
+    "balance_after": 1380.1700667157806
+  },
+  {
+    "coin": "ETH",
+    "side": "short",
+    "entry_price": 2519.54425,
+    "exit_price": 2463.3096,
+    "qty": 0.14883644135243904,
+    "pnl": 8.369765186699917,
+    "opened_at": "2026-10-13T08:41:05.021360+00:00",
+    "closed_at": "2026-10-14T15:04:53.901887+00:00",
+    "reason": "grid_round_trip",
+    "id": 133,
+    "balance_after": 1388.8641493907007
+  },
+  {
+    "coin": "XRP",
+    "side": "short",
+    "entry_price": 1.3830525,
+    "exit_price": 1.346469,
+    "qty": 271.139381910665,
+    "pnl": 9.91922757812884,
+    "opened_at": "2026-10-09T02:21:37.860623+00:00",
+    "closed_at": "2026-10-14T15:04:53.901887+00:00",
+    "reason": "grid_round_trip",
+    "id": 134,
+    "balance_after": 1495.4274817843884
+  },
+  {
+    "coin": "DOT",
+    "side": "short",
+    "entry_price": 1.182636,
+    "exit_price": 1.1273080000000002,
+    "qty": 317.0882672267714,
+    "pnl": 17.54385964912275,
+    "opened_at": "2026-10-09T16:23:55.726386+00:00",
+    "closed_at": "2026-10-14T15:04:53.901887+00:00",
+    "reason": "grid_round_trip",
+    "id": 135,
+    "balance_after": 1536.778881189717
+  },
+  {
+    "coin": "ETHFI",
+    "side": "short",
+    "entry_price": 0.6637925,
+    "exit_price": 0.633045,
+    "qty": 564.9355785128636,
+    "pnl": 17.370356700324294,
+    "opened_at": "2026-09-18T07:35:40.207934+00:00",
+    "closed_at": "2026-10-14T15:04:53.901887+00:00",
+    "reason": "grid_round_trip",
+    "id": 136,
+    "balance_after": 1880.4696421279345
+  },
+  {
+    "coin": "ETHFI",
+    "side": "short",
+    "entry_price": 0.6945399999999999,
+    "exit_price": 0.6637925,
+    "qty": 539.9257062228238,
+    "pnl": 16.601365652086237,
+    "opened_at": "2026-10-11T10:18:32.804623+00:00",
+    "closed_at": "2026-10-14T15:04:53.901887+00:00",
+    "reason": "grid_round_trip",
+    "id": 137,
+    "balance_after": 1880.4696421279345
   }
 ]
