@@ -1831,5 +1831,31 @@
     "reason": "grid_round_trip",
     "id": 141,
     "balance_after": 1555.1837891651771
+  },
+  {
+    "coin": "DOT",
+    "side": "long",
+    "entry_price": 1.0719800000000002,
+    "exit_price": 1.1273080000000002,
+    "qty": 349.81995932759935,
+    "pnl": 19.35483870967743,
+    "opened_at": "2026-10-15T14:32:02.394820+00:00",
+    "closed_at": "2026-10-15T18:38:10.884322+00:00",
+    "reason": "grid_round_trip",
+    "id": 142,
+    "balance_after": 1574.5386278748545
+  },
+  {
+    "coin": "ETHFI",
+    "side": "long",
+    "entry_price": 0.633045,
+    "exit_price": 0.6637925,
+    "qty": 592.3749496481294,
+    "pnl": 18.21404876430588,
+    "opened_at": "2026-10-14T15:04:53.901887+00:00",
+    "closed_at": "2026-10-15T18:38:10.884322+00:00",
+    "reason": "grid_round_trip",
+    "id": 143,
+    "balance_after": 1898.6836908922403
   }
 ]
