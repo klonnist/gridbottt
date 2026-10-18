@@ -1922,5 +1922,18 @@
     "reason": "grid_round_trip",
     "id": 148,
     "balance_after": 1610.4873954994373
+  },
+  {
+    "coin": "ETHFI",
+    "side": "short",
+    "entry_price": 0.6945399999999999,
+    "exit_price": 0.6637925,
+    "qty": 539.9257062228238,
+    "pnl": 16.601365652086237,
+    "opened_at": "2026-10-16T13:12:53.441027+00:00",
+    "closed_at": "2026-10-18T13:23:34.898734+00:00",
+    "reason": "grid_round_trip",
+    "id": 149,
+    "balance_after": 1932.6554132446508
   }
 ]
