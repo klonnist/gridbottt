@@ -2130,5 +2130,31 @@
     "reason": "grid_round_trip",
     "id": 164,
     "balance_after": 1982.5247106965908
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 83345.47,
+    "exit_price": 81821.2575,
+    "qty": 0.004499344715435644,
+    "pnl": 6.8579574570759245,
+    "opened_at": "2026-10-21T12:23:17.955919+00:00",
+    "closed_at": "2026-10-22T13:17:29.638333+00:00",
+    "reason": "grid_round_trip",
+    "id": 165,
+    "balance_after": 1394.0137355266572
+  },
+  {
+    "coin": "ETH",
+    "side": "short",
+    "entry_price": 2463.3096,
+    "exit_price": 2407.0749499999997,
+    "qty": 0.15223421367740375,
+    "pnl": 8.560837724174062,
+    "opened_at": "2026-10-21T12:23:17.955919+00:00",
+    "closed_at": "2026-10-22T13:17:29.638333+00:00",
+    "reason": "grid_round_trip",
+    "id": 166,
+    "balance_after": 1414.7466628636398
   }
 ]
