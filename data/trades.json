@@ -2468,5 +2468,70 @@
     "reason": "grid_round_trip",
     "id": 190,
     "balance_after": 2052.0808385136315
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 78772.8325,
+    "exit_price": 77248.62000000001,
+    "qty": 0.004760524512051791,
+    "pnl": 7.256050967825713,
+    "opened_at": "2026-09-18T13:49:39.669714+00:00",
+    "closed_at": "2026-10-30T00:55:11.396786+00:00",
+    "reason": "grid_round_trip",
+    "id": 191,
+    "balance_after": 1415.3738131922667
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 80297.04500000001,
+    "exit_price": 78772.8325,
+    "qty": 0.004670159406239669,
+    "pnl": 7.118315343983122,
+    "opened_at": "2026-09-18T14:23:05.110188+00:00",
+    "closed_at": "2026-10-30T00:55:11.396786+00:00",
+    "reason": "grid_round_trip",
+    "id": 192,
+    "balance_after": 1415.3738131922667
+  },
+  {
+    "coin": "AVAX",
+    "side": "short",
+    "entry_price": 8.418295,
+    "exit_price": 8.23079,
+    "qty": 44.54583736968115,
+    "pnl": 8.352567236002056,
+    "opened_at": "2026-09-19T01:48:28.032854+00:00",
+    "closed_at": "2026-10-30T00:55:11.396786+00:00",
+    "reason": "grid_round_trip",
+    "id": 193,
+    "balance_after": 1310.6294912680746
+  },
+  {
+    "coin": "SOL",
+    "side": "short",
+    "entry_price": 97.4134,
+    "exit_price": 95.2346,
+    "qty": 3.8495730566841937,
+    "pnl": 8.387449775903503,
+    "opened_at": "2026-09-16T18:25:40.466977+00:00",
+    "closed_at": "2026-10-30T00:55:11.396786+00:00",
+    "reason": "grid_round_trip",
+    "id": 194,
+    "balance_after": 1459.8456159646144
+  },
+  {
+    "coin": "ETHFI",
+    "side": "short",
+    "entry_price": 0.633045,
+    "exit_price": 0.6022975,
+    "qty": 592.3749496481294,
+    "pnl": 18.214048764305815,
+    "opened_at": "2026-09-18T01:48:45.493112+00:00",
+    "closed_at": "2026-10-30T00:55:11.396786+00:00",
+    "reason": "grid_round_trip",
+    "id": 195,
+    "balance_after": 2070.2948872779375
   }
 ]
