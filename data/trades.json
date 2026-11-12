@@ -3170,5 +3170,31 @@
     "reason": "grid_round_trip",
     "id": 244,
     "balance_after": 1428.1700168021125
+  },
+  {
+    "coin": "BTC",
+    "side": "short",
+    "entry_price": 74200.195,
+    "exit_price": 72675.9825,
+    "qty": 0.005053895073995425,
+    "pnl": 7.7032100454722965,
+    "opened_at": "2026-11-09T21:03:00.705475+00:00",
+    "closed_at": "2026-11-12T16:49:13.635547+00:00",
+    "reason": "grid_round_trip",
+    "id": 245,
+    "balance_after": 1467.0540411060547
+  },
+  {
+    "coin": "AVAX",
+    "side": "short",
+    "entry_price": 8.6058,
+    "exit_price": 8.418295,
+    "qty": 43.575263194589695,
+    "pnl": 8.170579725301533,
+    "opened_at": "2026-11-11T11:26:32.224529+00:00",
+    "closed_at": "2026-11-12T16:49:13.635547+00:00",
+    "reason": "grid_round_trip",
+    "id": 246,
+    "balance_after": 1436.3405965274142
   }
 ]
