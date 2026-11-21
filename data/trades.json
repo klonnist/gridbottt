@@ -3378,5 +3378,18 @@
     "reason": "grid_round_trip",
     "id": 260,
     "balance_after": 1280.7647104085272
+  },
+  {
+    "coin": "NEAR",
+    "side": "long",
+    "entry_price": 2.751715,
+    "exit_price": 2.8644000000000003,
+    "qty": 136.27864804312946,
+    "pnl": 15.356559454740093,
+    "opened_at": "2026-11-21T02:49:04.270664+00:00",
+    "closed_at": "2026-11-21T22:22:02.302560+00:00",
+    "reason": "grid_round_trip",
+    "id": 261,
+    "balance_after": 1296.1212698632673
   }
 ]
